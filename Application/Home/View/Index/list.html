@@ -1,0 +1,18 @@
+<div class="tab-content clearfix overflow" id="con1">
+ <div class="clearfix tab-con2 ">
+      <ul class="clearfix">
+      <!-- 循环数据库里的数据 -->
+        <volist name="res" id="vo">
+           <li style="background-color:white;">
+            <a href="/index.php?c=goods&a=detali&id={$vo.id}" class="tab-con-href2 clearfix">
+              <div class="img2"><img src="/Public/Picture/loading.png" alt="" title=""></div>
+              <p style="height:16px;font-size:12px;"><i><span style="font-size:16px;color:black;">{$vo.goods_name}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:gray;font-size:12px;">发布时间:&nbsp;{$vo.date}</span></i></p>  
+              <p style="font-size:12px;"><i>出发地：<span style="color:red">{$vo.deliver}</span></i></p> 
+              <p style="font-size:12px;"><i>目的地：<span style="color:red">{$vo.receipt}</span></i></p>                    
+            </a>   
+          </li>  
+          </volist>
+  	</ul>     
+	<div>{$page}</div>
+   </div>
+</div>

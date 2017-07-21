@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>发布货源</title>
+<meta name="keywords" content="发布货源">
+<meta name="description" content="发布货源">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0 , maximum-scale=1.0, user-scalable=0">
+<link rel="stylesheet" type="text/css" href="/Public/Css/apply.css">
+<link rel="stylesheet" type="text/css" href="/Public/Css/bootstrap.min.css">
+<script type="text/javascript" src="/Public/Scripts/jquery.js"></script>
+<script type="text/javascript" src="/Public/Scripts/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="/Public/Scripts/swiper-2.1.min.js"></script>
+<script type="text/javascript" src="/Public/Scripts/lazyload.js"></script>
+
+<script type="text/javascript" charset="utf-8">   
+        $(function() {   
+            $("img").lazyload({
+				effect      : "fadeIn"
+			});
+        });   
+    </script>
+</head>
+
+<body>
+
+<div id="wrap" class="clearfix overflow mg-auto">    
+  <a href="/index.php"><div class="i-head mg-auto overflow area border-bom">
+     <h1>发布货源</h1>
+  </div></a>
+  
+  
+<div class="main container" style="background-color:white;">
+<br>
+	<div class="panel panel-info">
+	  <div class="panel-heading">发布货源</div>
+	  <div class="panel-body">
+	    	<div id="#singcms-button-submit" class="content" style="border:1px;margin-top:10px;margin-left:20px;margin-right:20px;">
+			<form id="singcms-form" method="post" enctype="multipart/form-data" >
+				<div class="form-group">
+				    <label for="xingming">发货人真实姓名</h1></label>
+				    <input type="text" name="xingming" class="form-control" id="xingming" placeholder="请输入您的真实姓名">
+				</div>
+				<div class="form-group">
+				    <label for="shoujihao">发货人手机号</label>
+				    <input type="text" name="shoujihao" class="form-control" id="shoujihao" placeholder="请输入您的手机号">
+				</div>
+				<div class="form-group">
+				    <label for="chufa">出发地</label>
+				    <input type="text" name="chufa" class="form-control" id="chufa" placeholder="省/市/区(县)/街道">
+				</div>
+ 
+				<div class="form-group">
+				    <label for="daoda">到达地</label>
+				    <input type="text" name="daoda" class="form-control" id="daoda" placeholder="省/市/区(县)/街道">
+				</div>
+				<div class="form-group">
+				    <label for="leixing">货物类型</label>
+				    <input type="text" name="leixing" class="form-control" id="leixing" placeholder="如/建材/食品/化工/生鲜等">
+				</div>
+				<div class="form-group">
+				    <label for="mingcheng">货物名称</label>
+				    <input type="text" name="mingcheng" class="form-control" id="mingcheng" placeholder="请输入货物名称">
+				</div>
+				<div class="form-group">
+				    <label for="zhongliang">货物重量（千克、公斤）</label>
+				    <input type="text" name="zhongliang" class="form-control" id="zhongliang" placeholder="请输入货物重量">
+				</div>
+				<input type="button" onclick="Check()" class="btn btn-success" value="发布货源" />
+				
+				<a style="margin-left:10px;" class="btn btn-danger" href="/index.php">返回首页</a>
+			</form>
+			</div>
+	  </div>
+	</div>
+	
+</div>   <!--底部-->
+<include file="Index/footer" />

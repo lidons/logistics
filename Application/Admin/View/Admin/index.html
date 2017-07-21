@@ -1,0 +1,44 @@
+<include file="Index/header"/>
+     <h1 class="page-title">管理员显示</h1>
+<div class="btn-toolbar">
+    <button class="btn btn-primary"><i class="icon-plus"></i><a style="color:#fff;"href="/admin.php?c=admin&a=add">增加货物</a></button>
+  <div class="btn-group">
+  </div>
+</div>
+<div class="well">
+    <table class="table">
+      <thead>
+        <tr>
+  		  <th>姓名</th>
+          <th>邮箱</th>
+          <th style="width: 26px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+      <volist name="res" id='vo'>
+        <tr>
+         <th>{$vo.username}</th>
+         <th>{$vo.email}</th>
+          <td>
+              <a href="" attr-id="{$vo.id} "role="button" class="adminId"  data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+        </volist>
+      </tbody>
+    </table>
+</div>
+<div class="pagination">
+    <ul>
+        <li><a href="#">Prev</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">Next</a></li>
+    </ul>
+</div>
+
+
+        </div>
+    </div>    
+ <include file="Index/footer"/>

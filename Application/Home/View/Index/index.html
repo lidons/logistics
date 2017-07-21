@@ -1,0 +1,53 @@
+<include file="header"/>
+<body>
+<div id="wrap" class="clearfix overflow mg-auto">    
+  <a href="#"><div class="i-head mg-auto overflow area border-bom">
+     <h1>渭南利安物流信息发布平台</h1>
+  </div></a>
+
+  <!--焦点图开始-->
+    <div class="swiper-container overflow" style="height: 327px;">
+    
+        <div class="swiper-wrapper" id="swiper-wrapper">
+		<volist name="Carousel" id="vo">
+            <div class="swiper-slide" style="height: 327px; width: 640px;">
+                <a href="#"><img src="{$vo.thumb}" width="640px" height="327px"></a>
+            </div>
+		</volist>
+        </div> 
+        <div class="pagination"></div> 
+    
+    </div>
+	<script type="text/javascript">        
+         var newSlideSize = function slideSize(){
+            var w = Math.ceil($(".swiper-container").width()/1.96);
+            $(".swiper-container,.swiper-wrapper,.swiper-slide").height(w); 
+         };
+         newSlideSize();
+         $(window).resize(function(){
+           newSlideSize();
+         });
+    </script> 
+  <!--焦点图结束-->
+  
+  <!--快捷菜单开始-->
+    <div class="i-icon mg-auto overflow area clearfix">
+        <ul class="clearfix">
+           <li><a href="/index.php?c=goods" class="i-icon-tao"><img src="/Public/Picture/app_01.png"></a></li>
+           <li><a href="/index.php?c=goods&a=select" class="i-icon-game"><img src="/Public/Picture/app_02.png"></a></li>
+           <li><a href="/index.php?c=driver" class="i-icon-bizhi"><img src="/Public/Picture/app_03.png"></a></li>
+           <li><a href="/index.php?c=about" class="i-icon-zhuan"><img src="/Public/Picture/app_04.png"></a></li>
+        </ul>
+    </div>
+  <!--快捷菜单结束-->
+    
+  <!--最热开始-->
+    <div class="i-tab mg-auto overflow area clearfix">
+      <div class="i-tab-title">
+          <h2>最新发布</h2>
+      </div>
+<include file="list"/>
+  <!--最热结束-->
+
+    <!--底部-->
+<include file="footer" />

@@ -1,0 +1,18 @@
+<include file="Index/header"/>
+    <h1 class="page-title">主页轮播图</h1>
+
+    <div class="block">
+        <p class="block-heading">大小为640*327，请按格式上传，过大过小都会让图片失真</p>
+        <div class="block-body gallery">
+				<volist name="res" id="vo">
+                <img src="{$vo.thumb}" alt="#" title="#" width="640px" height="327px" />
+				<form   method='post' action="/admin.php?c=carousel&a=upload&p={$vo.id}" enctype="multipart/form-data">
+					<input name="image" type="file" />
+					<input type="submit" style="margin-right: 300px" class="btn btn-primary pull-right"  value="修改图片" >
+			    </form>
+				</volist>
+			<div class="clearfix"></div>
+        </div>
+    </div>
+
+ <include file="Index/footer"/>

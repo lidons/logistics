@@ -1,0 +1,44 @@
+<include file="Index/header"/>
+<h1 class="page-title">修改</h1>
+<div class="well">
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane active in" id="home">
+		         <form>
+                <div class="form-group">
+				    <label for="xingming">司机姓名</h1></label>
+				    <input type="text" name="xingming" style="width:600px;"  class="form-control" id="xingming" value="{$res.username}">
+				</div>
+				<div class="form-group">
+				    <label for="shoujihao">手机号</label>
+				    <input type="text" name="shoujihao" style="width:600px;" class="form-control" id="shoujihao" value="{$res.iphone}">
+				</div>
+				<div class="form-group">
+				    <label for="chufa">住址</label>
+				    <input type="text" name="zhuzhi"  style="width:600px;" class="form-control" id="chufa" value="{$res.deliver}">
+				</div>
+			
+				<div class="form-group">
+				    <label for="daoda">车型</label>
+				  <select class="form-control" name="title_font_color">
+                  <option value="">==请选择车型==</option>
+                      <option id="option" value="1" <if condition="$res.driver_type eq 1">selected="selected"</if>>半挂车</option>
+					  <option id="option" value="2" <if condition="$res.driver_type eq 2">selected="selected"</if>>货车</option>
+					  <option id="option" value="3" <if condition="$res.driver_type eq 3">selected="selected"</if>>集装箱车</option>
+					  <option id="option" value="4" <if condition="$res.driver_type eq 4">selected="selected"</if>>卡车</option>
+                </select>
+				</div>
+					<input type="hidden" name="id" value="{$res.id}"/>
+                    <input style="width:60px; margin-right:450px;margin-top:20px;" class="btn btn-primary pull-right" onclick="Submit()" value="修改"/>
+                    <div class="clearfix"></div>
+                </form>
+      </div>
+      <div class="tab-pane fade" id="profile">
+      </div>
+  </div>
+
+</div>
+
+
+        </div>
+    </div>
+<include file="Index/footer"/>

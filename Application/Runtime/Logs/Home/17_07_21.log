@@ -1,0 +1,14 @@
+[ 2017-07-21T09:15:40+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.077245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002658s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.2332s ]
+SQL: SELECT * FROM `goods` ORDER BY id desc LIMIT 10   [ RunTime:0.0066s ]
+ERR: 1146:Table 'logistic.carousel' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `carousel`
+ERR: 1146:Table 'logistic.carousel' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `carousel`
+

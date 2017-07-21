@@ -1,0 +1,160 @@
+    <footer>
+        <hr>
+        <!-- Purchase a site license to remove this link from the footer: http://www.portnine.com/bootstrap-themes -->
+        <p class="pull-right">A <a href="http://www.portnine.com/bootstrap-themes" target="_blank">Free Bootstrap Theme</a> by <a href="http://www.portnine.com" target="_blank">Portnine</a></p>
+        <p>&copy; 2012 <a href="http://www.portnine.com">Portnine</a></p>
+    </footer>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/public/css/bootstrap/js/bootstrap.js"></script>
+	<script src="/Public/dialog/layer.js"></script>
+	<script src="/Public/jump.js"></script>
+	<script>
+	
+	  function Check(){
+		  var username = $('input[name="xingming"]').val();
+		  var iphone = $('input[name="shoujihao"]').val();
+		  var deliver = $('input[name="chufa"]').val();
+		  var receipt = $('input[name="daoda"]').val();
+		  var goods_type = $('input[name="leixing"]').val();
+		  var goods_name = $('input[name="mingcheng"]').val();
+		  var goods_weight = $('input[name="zhongliang"]').val();
+		  var d = new Date();
+		  var date = d.toLocaleString();
+		  var id  = $('input[name="id"]').val();
+		  //var date = d.getFullYear()+'-'+d.getMonth()+'-'+d.getDate()+''+d.getHost+':';
+		  if(!goods_weight)
+			  dialog.error('货物重量不能为空');
+	  	  if(!goods_name)
+	  		  dialog.error('货物名称不能为空');
+	  	  if(!goods_type)
+	  		  dialog.error('货物类型不能为空');
+	  	  if(!receipt)
+	  		  dialog.error('目的地不能为空');
+	  	  if(!deliver)
+	  		  dialog.error('出发地不能为空');
+	  	  if(!iphone)
+	  		  dialog.error('手机号不能为空');
+	  	  if(!username)
+	  		  dialog.error('用户名不能为空！');
+		  var url = "/admin.php?c=goods&a=add";
+		  var data = {'username':username,
+				     'iphone':iphone,
+				     'deliver':deliver,
+				     'receipt':receipt,
+				     'goods_type':goods_type,
+				     'goods_name':goods_name,
+				     'goods_weight':goods_weight,
+				     'date':date,
+					 'id':id};
+		  $.post(url,data,function(result){
+			  	if (result.status == 0){
+					return dialog.error(result.message);
+				}
+				if (result.status == 1){
+					return dialog.success(result.message,'/admin.php');
+				}
+		  },'JSON'); 
+  }
+  
+  
+	$(".showId").click(function(){
+		var id = $(this).attr('attr-id');
+		dialog.confirm('是否确认删除','/admin.php?c=goods&a=remove&p='+id);
+	});
+	$(".obgId").click(function(){
+		var id = $(this).attr('attr-id');
+		dialog.confirm('是否确认删除','/admin.php?c=driver&a=remove&p='+id);
+	});
+	$(".adminId").click(function(){
+		var id = $(this).attr('attr-id');
+		dialog.confirm('是否确认删除','/admin.php?c=admin&a=remove&p='+id);
+	});
+	  function Submit(){
+		  var username = $('input[name="xingming"]').val();
+		  var iphone = $('input[name="shoujihao"]').val();
+		  var deliver = $('input[name="zhuzhi"]').val();
+		  
+		  var options=$(".form-control option:selected");
+		  var driver_type  = options.val();
+		  var d = new Date();
+		  var date = d.toLocaleString();
+		  var id  = $('input[name="id"]').val();
+		  //var date = d.getFullYear()+'-'+d.getMonth()+'-'+d.getDate()+''+d.getHost+':';
+	  	  if(!iphone)
+	  		  dialog.error('手机号不能为空');
+	  	  if(!deliver)
+	  	   dialog.error('地址不能为空');
+		 if(!iphone)
+	  		  dialog.error('手机号不能为空');
+		 if(!username)
+			  dialog.error('姓名不能为空');
+		  var url = "/admin.php?c=driver&a=add";
+		  var data = {'username':username,
+				     'iphone':iphone,
+				     'deliver':deliver,
+				     'driver_type':driver_type,
+				     'date':date,
+					 'id':id};
+		  $.post(url,data,function(result){
+			  	if (result.status == 0){
+					return dialog.error(result.message);
+				}
+				if (result.status == 1){
+					return dialog.success(result.message,'/admin.php?c=driver');
+				}
+		  },'JSON'); 
+  }
+  function Login(){
+	 	var username = $('input[name="username"]').val();
+		var password = $('input[name="password"]').val();
+		if(!password){
+			dialog.error('密码不能为空');
+		}
+		if(!username){
+			dialog.error('用户名不能为空');
+		}
+		var url ='/admin.php?c=login&a=check';
+		var data={'username':username,'password':password};
+		$.post(url,data,function(result){
+			if(result.status == 0){
+				return dialog.error(result.message);
+			}
+			if (result.status == 1){
+					return dialog.success(result.message,'/admin.php');
+				}
+		},'json');
+  }
+  function Admin(){
+	 	var username = $('input[name="username"]').val();
+		var password = $('input[name="password"]').val();
+		var newpassword = $('input[name="newpassword"]').val();
+		var email = $('input[name="email"]').val();
+		if(!email){
+			dialog.error("邮箱不能为空");
+		}
+		if(password != newpassword){
+			dialog.error('两次输入密码不一致');
+		}
+		if(!password){
+			dialog.error('密码不能为空');
+		}
+		if(!username){
+			dialog.error('用户名不能为空');
+		}
+		var url ='/admin.php?c=admin&a=add';
+		var data={'username':username,'password':password,'email':email};
+		$.post(url,data,function(result){
+			if(result.status == 0){
+				return dialog.error(result.message);
+			}
+			if (result.status == 1){
+					return dialog.success(result.message,'/admin.php?c=admin');
+				}
+		},'json');
+  }
+  </script>
+  </body>
+</html>
+

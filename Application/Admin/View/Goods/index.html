@@ -1,0 +1,51 @@
+<include file="Index/header"/>
+     <h1 class="page-title">货物</h1>
+<div class="btn-toolbar">
+    <button class="btn btn-primary"><i class="icon-plus"></i><a style="color:#fff;"href="/admin.php?c=goods&a=add">增加货物</a></button>
+  <div class="btn-group">
+  </div>
+</div>
+<div class="well">
+    <table class="table">
+      <thead>
+        <tr>
+  		  <th>姓名</th>
+          <th>手机号</th>
+          <th>发货地</th>
+          <th>收货地</th>
+          <th>货物</th>
+          <th>时间</th>
+          <th>重量</th>
+          <th style="width: 26px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+      <volist name="res" id='vo'>
+        <tr>
+          <th>{$vo.username}</th>
+          <th>{$vo.iphone}</th>
+          <th>{$vo.deliver}</th>
+          <th>{$vo.receipt}</th>
+          <th>{$vo.goods_name}</th>
+          <th>{$vo.date}</th>
+          <th>{$vo.goods_weight}kg</th>
+          <td>
+              <a href="/admin.php?c=goods&a=edit&id={$vo.id}"><i class="icon-pencil"></i></a>
+              <a href="" attr-id="{$vo.id} "role="button" class="showId"  data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+        </volist>
+      </tbody>
+    </table>
+</div>
+
+<div class="pagination">
+    <ul>
+        <li>{$page}</li>
+    </ul>
+</div>
+
+
+        </div>
+    </div>    
+ <include file="Index/footer"/>

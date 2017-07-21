@@ -1,0 +1,23 @@
+<include file="Index/header"/>
+<body>
+<div id="wrap" class="clearfix overflow mg-auto">    
+  <a href="/index.php"><div class="i-head mg-auto overflow area border-bom">
+     <h1>货源详情</h1>
+  </div></a>  <!--列表开始-->
+    <div class="i-tab mg-auto overflow area clearfix">
+      <div class="i-tab-title">
+          <h2>货源详情</h2>
+      </div>
+      <div class="tab-content clearfix overflow" id="con1">
+        <div class="clearfix tab-con2 tab-con-info" style="padding-top:10px;padding-left:10px;padding-right:10px;margin-top:20px;background-color:white;"> 
+           <span>货品名称：{$data.goods_name}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+           <span>货品重量：{$data.goods_weight}</span>千克&nbsp;&nbsp;&nbsp;&nbsp;
+           <span>货品类型：{$data.goods_type}</span><br><br>
+           <span>出发地：{$data.deliver}</span><br><br>
+           <span>目的地：{$data.receipt}</span><br><br>
+           <span>发货人：{$data.username}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>手机号：{$data.iphone}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>发布时间：{$data.date}</span><br><br>
+         </div>
+      </div>
+    </div>
+  <!--列表结束-->   <!--底部-->
+<include file="Index/footer" />

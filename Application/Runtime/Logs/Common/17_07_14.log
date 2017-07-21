@@ -1,0 +1,90 @@
+[ 2017-07-14T09:13:42+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-07-14T09:36:19+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-07-14T09:36:46+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000865s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-07-14T09:37:20+08:00 ] 127.0.0.1 /index/goods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000652s ]
+ERR: 无法加载模块:Index
+
+[ 2017-07-14T09:53:06+08:00 ] 127.0.0.1 /Scripts/com.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001335s ]
+ERR: 无法加载模块:Scripts
+
+[ 2017-07-14T09:53:06+08:00 ] 127.0.0.1 /Css/bootstrap.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012516s ]
+ERR: 无法加载模块:Css
+
+[ 2017-07-14T09:53:59+08:00 ] 127.0.0.1 /Css/bootstrap.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001202s ]
+ERR: 无法加载模块:Css
+
+[ 2017-07-14T10:57:14+08:00 ] 127.0.0.1 /index%E3%80%81goods&a=detali
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+ERR: 无法加载模块:Index、goods&a=detali
+
+[ 2017-07-14T10:57:23+08:00 ] 127.0.0.1 /index/goods/detali
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+ERR: 无法加载模块:Index
+
+[ 2017-07-14T13:52:50+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000082s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001965s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-07-14T13:57:33+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001098s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-07-14T14:08:33+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000937s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-07-14T14:08:43+08:00 ] 127.0.0.1 /index.php/goods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+ERR: 无法加载模块:Goods
+
+[ 2017-07-14T17:59:10+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000912s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-07-14T22:47:30+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+ERR: 无法加载模块:Favicon
+

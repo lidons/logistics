@@ -1,0 +1,58 @@
+<include file="Index/header"/>
+     <h1 class="page-title">货物</h1>
+<div class="btn-toolbar">
+    <button class="btn btn-primary"><i class="icon-plus"></i><a style="color:#fff;"href="/admin.php?c=driver&a=add">添加司机</a></button>
+  <div class="btn-group">
+  </div>
+</div>
+<div class="well">
+    <table class="table">
+      <thead>
+        <tr>
+  		  <th>姓名</th>
+          <th>手机号</th>
+          <th>司机地址</th>
+          <th>货车类型</th>
+          <th>时间</th>
+		  <th>图片</th>
+          <th style="width: 26px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+      <volist name="res" id='vo'>
+        <tr>
+          <th>{$vo.username}</th>
+          <th>{$vo.iphone}</th>
+          <th>{$vo.deliver}</th>
+          <th>{$vo.driver_type|getDriver}</th>
+          <th>{$vo.date}</th>
+		  <th> 
+			  <if condition="$vo.thumb eq '' "> 
+					<form  id="{$vo.id}" method='post' action="/admin.php?c=driver&a=upload&p={$vo.id}" enctype="multipart/form-data">
+					<input name="image" type="file" id="{$vo.id}"/>
+					<input type="submit" id="{$vo.id}" value="提交" >
+			        </form>
+				<else /> 
+					<image src="{$vo.thumb}" height="80px" width="80px">
+					<form  id="{$vo.id}" method='post' action="/admin.php?c=driver&a=upload&p={$vo.id}" enctype="multipart/form-data">
+					<input name="image" type="file" id="{$vo.id}"/>
+					<input type="submit" id="{$vo.id}" value="修改图片" >
+			        </form>
+					
+			 </if>
+		  </th>
+          <td>
+              <a href="/admin.php?c=driver&a=edit&id={$vo.id}"><i class="icon-pencil"></i></a>
+              <a href="" attr-id="{$vo.id} "role="button" class="obgId"  data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+        </volist>
+      </tbody>
+    </table>
+</div>
+
+
+
+        </div>
+    </div>    
+ <include file="Index/footer"/>

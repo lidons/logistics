@@ -1,0 +1,42 @@
+[ 2017-07-20T09:09:51+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.039737s ]
+INFO: [ app_init ] --END-- [ RunTime:0.170323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001538s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.1984s ]
+SQL: SELECT * FROM `goods` ORDER BY id desc LIMIT 10   [ RunTime:0.0312s ]
+ERR: 1146:Table 'logistic.carousel' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `carousel`
+ERR: 1146:Table 'logistic.carousel' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `carousel`
+
+[ 2017-07-20T13:14:38+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002929s ]
+INFO: [ app_init ] --END-- [ RunTime:0.172143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001142s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001215s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.2663s ]
+SQL: SELECT * FROM `goods` ORDER BY id desc LIMIT 10   [ RunTime:0.0299s ]
+ERR: 1146:Table 'logistic.carousel' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `carousel`
+ERR: 1146:Table 'logistic.carousel' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `carousel`
+
+[ 2017-07-20T14:57:06+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.014297s ]
+INFO: [ app_init ] --END-- [ RunTime:0.180648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012524s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.4821s ]
+SQL: SELECT * FROM `goods` ORDER BY id desc LIMIT 10   [ RunTime:0.0376s ]
+ERR: 1146:Table 'logistic.carousel' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `carousel`
+ERR: 1146:Table 'logistic.carousel' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `carousel`
+
